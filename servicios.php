@@ -9,7 +9,8 @@ $password = DATABASE_PASSWORD;
 
 
 //No olvidar que para enviar un formulario es necesario definir el atributo "name" a los campos.
-print_r($_POST);
+//Esta funcion sirve para imprimir objetos
+//print_r($_POST);
 
 $accion = $_POST['accion'];
 
@@ -50,7 +51,8 @@ switch($accion)
             // Execute the statement
             try {
                 $stmt->execute();
-                echo "Data inserted successfully!";
+                //echo "Data inserted successfully!";
+                header('Location: index.php');
             } catch (PDOException $e) {
                 die("Error: " . $e->getMessage());
             }
