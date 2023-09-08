@@ -62,7 +62,7 @@ switch($accion)
         break;
 
     case 'descargar':
-
+        //Select C.nombre as 'Nombre Contacto',C.email as "EMAIL Contacto",Pt.nombre "Tipo Producto",c.mensaje as "Mensaje",c.au_insert_date as "Fecha Contacto" from contacto as C left join producto_tipo PT on Pt.id_producto_tipo = c.id_producto_tipo order by C.au_insert_date;
         break;
 
     default:
